@@ -1,0 +1,49 @@
+/* features/products/styles/products.module.css */
+
+/* Grid principal de productos */
+.gridProductos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Panel lateral de filtros */
+.layoutProducts {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .layoutProducts {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Card de producto */
+.cardProducto {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid var(--color-borde);
+  background-color: var(--color-superficie);
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+.cardProducto:hover {
+  border-color: var(--color-acento);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Imagen del producto en el detalle */
+.imagenDetalle {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 0.75rem;
+  background-color: var(--color-fondo-alt);
+  padding: 1.5rem;
+}

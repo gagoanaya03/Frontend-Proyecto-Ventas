@@ -1,0 +1,30 @@
+/* cart/styles/cart.module.css — estilos propios de la feature cart */
+
+.layoutCarrito {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .layoutCarrito { grid-template-columns: 1fr; }
+}
+
+.itemCarrito {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-borde);
+  background-color: var(--color-superficie);
+}
+
+.resumenBox {
+  border-radius: 0.75rem;
+  border: 1px solid var(--color-borde);
+  background-color: var(--color-superficie);
+  padding: 1.25rem;
+  position: sticky;
+  top: 5rem;
+}

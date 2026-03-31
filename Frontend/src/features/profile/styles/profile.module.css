@@ -1,0 +1,31 @@
+/* profile/styles/profile.module.css — estilos de la sección de perfil */
+
+.contenedor {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.tarjeta {
+  border-radius: 1rem;
+  border: 1px solid var(--color-borde);
+  background-color: var(--color-superficie);
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.campo {
+  width: 100%;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-borde);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-family: inherit;
+  transition: border-color 200ms ease;
+}
+.campo:focus {
+  outline: none;
+  border-color: var(--color-acento);
+}
+.campo::placeholder { color: var(--color-texto-suave); }

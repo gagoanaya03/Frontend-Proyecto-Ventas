@@ -1,0 +1,91 @@
+/* shared/styles/global.css — Reset y variables base */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+header, 
+aside {
+  background-color: var(--marca-azul);
+  border-color: var(--marca-azulClaro);
+  color: var(--marca-texto);
+  transition: background-color 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+::-webkit-scrollbar        { width: 6px; height: 6px; }
+::-webkit-scrollbar-track  { background: var(--color-fondo-alt); }
+::-webkit-scrollbar-thumb  { background: var(--color-borde); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-acento); }
+
+::selection     { background-color: var(--color-acento); color: #fff; }
+:focus-visible  { outline: 2px solid var(--color-acento); outline-offset: 2px; }
+
+/* Inputs normalizados para AMBOS temas */
+input,
+textarea,
+select {
+  background-color: var(--color-superficie);
+  color: var(--color-texto);
+  border: 1px solid var(--color-borde);
+  border-radius: 0.5rem;
+  transition: all 200ms ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-texto-suave);
+}
+
+.dark input,
+.dark textarea,
+.dark select {
+  color-scheme: dark;
+}
+
+/* Cancela el fondo azul del autofill de Chrome */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--color-texto);
+  -webkit-box-shadow: 0 0 0 1000px var(--color-superficie) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Clase utilitaria para inputs del dashboard admin */
+.campo-admin {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-family: inherit;
+}
+.campo-admin:focus {
+  outline: none;
+  border-color: var(--color-acento);
+  box-shadow: 0 0 0 2px var(--color-acento-hover-20, rgba(249, 115, 22, 0.1));
+}
+

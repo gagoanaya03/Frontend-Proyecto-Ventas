@@ -1,0 +1,115 @@
+/* shared/styles/temas.css — Variables de color para modo claro y oscuro */
+
+:root {
+  --color-fondo: #F1F5F9;
+  /* slate-100 */
+  --color-fondo-alt: #F8FAFC;
+  /* slate-50 */
+  --color-superficie: #FFFFFF;
+  --color-borde: #E2E8F0;
+  /* slate-200 */
+  --color-texto: #334155;
+  /* slate-700 (Plomo oscuro) */
+  --color-texto-suave: #64748B;
+  /* slate-500 */
+  --color-acento: #F97316;
+  --color-acento-hover: #EA580C;
+  --transicion: 200ms ease;
+
+  /* Mapeo de marca para modo claro (Normalización Total) */
+  --marca-azul: #2C1FF1;
+  /* Navbar/Sidebar en claro */
+  --marca-azulMedio: #F8FAFC;
+  /* Cards en claro */
+  --marca-azulClaro: #E2E8F0;
+  /* Bordes en claro */
+  --marca-texto: #334155;
+  /* Texto plomo */
+  --marca-textoSuave: #64748B;
+
+  /* Colores semánticos de estado — modo claro */
+  --color-exito: #16A34A;
+  /* green-700 */
+  --color-exito-suave: #DCFCE7;
+  /* green-100 */
+  --color-exito-borde: #86EFAC;
+  /* green-300 */
+
+  --color-error: #DC2626;
+  /* red-600 */
+  --color-error-suave: #FEE2E2;
+  /* red-100 */
+  --color-error-borde: #FCA5A5;
+  /* red-300 */
+
+  --color-advertencia: #D97706;
+  /* amber-600 */
+  --color-advertencia-suave: #FEF3C7;
+  /* amber-100 */
+  --color-advertencia-borde: #FCD34D;
+  /* amber-300 */
+
+  --color-info: #2563EB;
+  /* blue-600 */
+  --color-info-suave: #DBEAFE;
+  /* blue-100 */
+  --color-info-borde: #93C5FD;
+  /* blue-300 */
+
+  /* Texto sobre superficie blanca para badges y botones */
+  --color-texto-sobre-acento: #FFFFFF;
+
+  /* Normalización Navbar y Footer (Específico Cambio 1 y 5) */
+  --color-navbar-contenido: #FFFFFF;
+  --color-footer-fondo: #1E293B;
+}
+
+.dark {
+  --color-fondo: #2C2C2C;
+  /* Gris oscuro profundo */
+  --color-fondo-alt: #333333;
+  /* Gris ligeramente más claro */
+  --color-superficie: #3A3A3A;
+  /* Gris para cards y contenedores */
+  --color-borde: #444444;
+  --color-texto: #F1F5F9;
+  --color-texto-suave: #94A3B8;
+  --color-acento: #F1F5F9;
+  --color-acento-hover: #EA580C;
+
+  /* Mapeo de marca para modo oscuro (Normalización a Gris) */
+  --marca-azul: #2C2C2C;
+  /* Se mantiene para Navbar/Sidebar según Cambio 1 */
+  --marca-azulMedio: var(--color-fondo-alt);
+  --marca-azulClaro: var(--color-borde);
+  --marca-texto: var(--color-texto);
+  --marca-textoSuave: var(--color-texto-suave);
+
+  /* Colores semánticos de estado — modo oscuro (más suaves para fondos oscuros) */
+  --color-exito: #4ADE80;
+  /* green-400 */
+  --color-exito-suave: rgba(74, 222, 128, 0.10);
+  --color-exito-borde: rgba(74, 222, 128, 0.30);
+
+  --color-error: #F87171;
+  /* red-400 */
+  --color-error-suave: rgba(248, 113, 113, 0.10);
+  --color-error-borde: rgba(248, 113, 113, 0.30);
+
+  --color-advertencia: #FBBF24;
+  /* amber-400 */
+  --color-advertencia-suave: rgba(251, 191, 36, 0.10);
+  --color-advertencia-borde: rgba(251, 191, 36, 0.30);
+
+  --color-info: #60A5FA;
+  /* blue-400 */
+  --color-info-suave: rgba(96, 165, 250, 0.10);
+  --color-info-borde: rgba(96, 165, 250, 0.30);
+
+  /* Texto sobre acento en modo oscuro */
+  --color-texto-sobre-acento: #FFFFFF;
+
+  /* Normalización Navbar y Footer en modo oscuro */
+  --color-navbar-contenido: var(--color-texto);
+  --color-footer-fondo: #1A1A1A;
+}

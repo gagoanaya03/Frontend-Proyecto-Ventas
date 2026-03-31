@@ -6,6 +6,20 @@
    CATEGORÍAS CON SUBCATEGORÍAS
    ============================================================ */
 export const categorias = [
+  /* ── Tecnología ─────────────────────────────────── */
+  {
+    id: 'electronica',
+    nombre: 'Electrónica',
+    icono: 'zap',
+    subcategorias: [
+      { id: 'smartphones',   nombre: 'Smartphones'    },
+      { id: 'laptops',       nombre: 'Laptops'        },
+      { id: 'tablets',       nombre: 'Tablets'        },
+      { id: 'smartwatches',  nombre: 'Smartwatches'   },
+      { id: 'camaras',       nombre: 'Cámaras'        },
+      { id: 'tv',            nombre: 'Televisores'    },
+    ],
+  },
   {
     id: 'perifericos',
     nombre: 'Periféricos',
@@ -58,6 +72,76 @@ export const categorias = [
       { id: 'soportes',     nombre: 'Soportes'     },
       { id: 'cables',       nombre: 'Cables'       },
       { id: 'hubs',         nombre: 'Hubs USB'     },
+    ],
+  },
+  /* ── Moda ────────────────────────────────────────── */
+  {
+    id: 'ropa',
+    nombre: 'Ropa',
+    icono: 'shirt',
+    subcategorias: [
+      { id: 'camisetas',   nombre: 'Camisetas'    },
+      { id: 'pantalones',  nombre: 'Pantalones'   },
+      { id: 'chaquetas',   nombre: 'Chaquetas'    },
+      { id: 'vestidos',    nombre: 'Vestidos'     },
+      { id: 'ropa-interior', nombre: 'Ropa Interior' },
+      { id: 'calzado',     nombre: 'Calzado'      },
+    ],
+  },
+  /* ── Hogar ───────────────────────────────────────── */
+  {
+    id: 'hogar',
+    nombre: 'Hogar',
+    icono: 'home',
+    subcategorias: [
+      { id: 'muebles',      nombre: 'Muebles'       },
+      { id: 'cocina',       nombre: 'Cocina'        },
+      { id: 'decoracion',   nombre: 'Decoración'    },
+      { id: 'iluminacion',  nombre: 'Iluminación'   },
+      { id: 'electrodomesticos', nombre: 'Electrodomésticos' },
+      { id: 'jardin',       nombre: 'Jardín'        },
+    ],
+  },
+  /* ── Deportes ────────────────────────────────────── */
+  {
+    id: 'deportes',
+    nombre: 'Deportes',
+    icono: 'dumbbell',
+    subcategorias: [
+      { id: 'fitness',      nombre: 'Fitness'       },
+      { id: 'futbol',       nombre: 'Fútbol'        },
+      { id: 'natacion',     nombre: 'Natación'      },
+      { id: 'ciclismo',     nombre: 'Ciclismo'      },
+      { id: 'running',      nombre: 'Running'       },
+      { id: 'outdoor',      nombre: 'Outdoor'       },
+    ],
+  },
+  /* ── Libros ──────────────────────────────────────── */
+  {
+    id: 'libros',
+    nombre: 'Libros',
+    icono: 'book-open',
+    subcategorias: [
+      { id: 'tecnologia-libros', nombre: 'Tecnología'   },
+      { id: 'ficcion',           nombre: 'Ficción'      },
+      { id: 'negocios',          nombre: 'Negocios'     },
+      { id: 'educacion',         nombre: 'Educación'    },
+      { id: 'infantil',          nombre: 'Infantil'     },
+      { id: 'comics',            nombre: 'Cómics / Manga' },
+    ],
+  },
+  /* ── Belleza ─────────────────────────────────────── */
+  {
+    id: 'belleza',
+    nombre: 'Belleza',
+    icono: 'sparkles',
+    subcategorias: [
+      { id: 'skincare',     nombre: 'Cuidado facial'  },
+      { id: 'maquillaje',   nombre: 'Maquillaje'      },
+      { id: 'fragancias',   nombre: 'Fragancias'      },
+      { id: 'cabello',      nombre: 'Cuidado del cabello' },
+      { id: 'corporal',     nombre: 'Cuidado corporal'},
+      { id: 'hombres',      nombre: 'Para él'         },
     ],
   },
 ];

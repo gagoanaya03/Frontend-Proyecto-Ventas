@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { X, Trash2, Plus, Minus, ShoppingBag } from 'lucide-react';
 import useCarrito from '../hooks/useCarrito';
 import useAuth from '../hooks/useAuth';
+import useTema from '../hooks/useTema';
 import { formatearPrecio } from '../utils/formatters';
 
 const CartDrawer = () => {
@@ -16,6 +17,7 @@ const CartDrawer = () => {
     vaciarCarrito, totalPrecio,
   } = useCarrito();
   const { estaAutenticado } = useAuth();
+  const { esModoOscuro } = useTema();
   const navegar = useNavigate();
 
   const manejarProceder = useCallback(() => {
@@ -41,13 +43,36 @@ const CartDrawer = () => {
         aria-label="Carrito de compras"
         className="fixed inset-y-0 right-0 z-50 flex w-80 flex-col bg-marca-azulMedio shadow-2xl"
       >
-        {/* Encabezado */}
-        <div className="flex h-16 items-center justify-between border-b border-marca-azulClaro px-4">
-          <span className="font-bold text-marca-texto">Carrito de compras</span>
+        {/* Encabezado — azul en modo claro, neutro en oscuro */}
+        <div
+          style={!esModoOscuro ? {
+            background: '#2C1FF1',
+            borderBottom: '1px solid rgba(255,255,255,0.15)',
+          } : {}}
+          className={`flex h-16 items-center justify-between px-4 ${
+            esModoOscuro ? 'border-b border-marca-azulClaro' : ''
+          }`}
+        >
+          <div>
+            <p style={!esModoOscuro ? { color: '#fff', fontWeight: 800, fontSize: '1rem', lineHeight: 1 } : {}}
+               className={esModoOscuro ? 'font-bold text-marca-texto' : ''}>
+              Carrito de compras
+            </p>
+            {!esModoOscuro && (
+              <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.72rem', marginTop: '2px' }}>
+                Tus productos seleccionados
+              </p>
+            )}
+          </div>
           <button
             aria-label="Cerrar carrito"
             onClick={cerrarDrawer}
-            className="flex h-8 w-8 items-center justify-center rounded-lg text-marca-texto transition hover:text-marca-naranja"
+            style={!esModoOscuro ? { color: '#fff' } : {}}
+            className={`flex h-8 w-8 items-center justify-center rounded-lg transition ${
+              esModoOscuro
+                ? 'text-marca-texto hover:text-marca-naranja'
+                : 'hover:bg-white/15'
+            }`}
           >
             <X size={20} />
           </button>

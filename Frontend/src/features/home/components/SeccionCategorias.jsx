@@ -5,18 +5,25 @@
 import { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
-  Keyboard, Monitor, HardDrive, Headphones, Cpu,
+  Zap, Keyboard, Monitor, HardDrive, Headphones, Cpu,
+  Shirt, Home, Dumbbell, BookOpen, Sparkles,
 } from 'lucide-react';
 import { categorias } from '../../../shared/utils/mockData';
 import estilos from '../styles/home.module.css';
 
-/* Mapa de íconos por id de categoría */
+/* Mapa de íconos por id de categoría — incluye todas las categorías */
 const ICONOS = {
+  electronica:    <Zap size={32} />,
   perifericos:    <Keyboard size={32} />,
   monitores:      <Monitor size={32} />,
   almacenamiento: <HardDrive size={32} />,
   audio:          <Headphones size={32} />,
   accesorios:     <Cpu size={32} />,
+  ropa:           <Shirt size={32} />,
+  hogar:          <Home size={32} />,
+  deportes:       <Dumbbell size={32} />,
+  libros:         <BookOpen size={32} />,
+  belleza:        <Sparkles size={32} />,
 };
 
 const TarjetaCategoria = ({ categoria, onClick }) => (

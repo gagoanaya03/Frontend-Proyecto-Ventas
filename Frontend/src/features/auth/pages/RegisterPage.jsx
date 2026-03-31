@@ -102,9 +102,14 @@ const RegisterPage = () => {
     e.preventDefault();
     setError('');
     if (valores.contrasena !== valores.confirmar) { setError('Las contraseñas no coinciden.'); return; }
-    if (valores.contrasena.length < 6)            { setError('La contraseña debe tener al menos 6 caracteres.'); return; }
+    if (valores.contrasena.length < 3)            { setError('La contraseña debe tener al menos 3 caracteres.'); return; }
     try {
-      const resultado = await registrar(valores.nombre.trim(), valores.correo.trim(), valores.contrasena);
+      const resultado = await registrar(
+        valores.nombre.trim(), 
+        valores.correo.trim(), 
+        valores.contrasena,
+        valores.confirmar
+      );
       if (resultado.exito) navegar('/', { replace: true });
       else setError(resultado.mensaje);
     } catch {

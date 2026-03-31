@@ -181,7 +181,7 @@ const LoginPage = () => {
         <div style={S.credenciales}>
           <p style={{ fontWeight: 700, marginBottom: '6px', color: '#475569' }}>Credenciales de prueba:</p>
           <p>👑 admin@jyp.com / admin123</p>
-          <p>🛒 cliente@demo.com / demo123</p>
+          <p>🛒 juan@example.com / cliente123</p>
         </div>
       </div>
     </div>
